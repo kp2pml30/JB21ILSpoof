@@ -9,6 +9,6 @@ echo -e "\033[32mResult\033[0m"
 mono build/Result > build/txt
 cat build/txt
 
-echo -e "\033[32mDiff\033[0m"
-diff -U1 expected.txt build/txt
+echo -e "\033[32mDiff with expected\033[0m"
+diff -s -U1 expected.txt build/txt
 

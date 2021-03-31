@@ -1,0 +1,12 @@
+Int
+0
+Double
+2
+Decimal
+26
+Method
+-46
+GetProperty
+29
+SetProperty
+26

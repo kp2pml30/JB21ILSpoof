@@ -8,9 +8,9 @@ using Mono.Cecil.Cil;
 
 #nullable enable
 
-namespace CSharpPlusSpoof
+namespace ILSpoof
 {
-	class Spoofer
+	public class Spoofer
 	{
 		/// Cecil assembly for corresponding input
 		private AssemblyDefinition assembly;
@@ -69,6 +69,7 @@ namespace CSharpPlusSpoof
 				{
 					var obj = i.Operand;
 					// I am not sure if it is a good approach
+					// `is not null` not available
 					if (obj != null && obj.ToString() == "System.Decimal System.Decimal::op_Addition(System.Decimal,System.Decimal)")
 						i.Operand = DecimalSub;
 				}
